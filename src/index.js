@@ -16,7 +16,7 @@ import * as serviceWorker from "./serviceWorker";
 import reducer from './reducer';
 
 const wsLink = new WebSocketLink({
-    uri: 'ws://localhost:4000/graphql',
+    uri: 'ws://guarded-brook-42627.herokuapp.com/',
     options: {
       reconnect: true,
 

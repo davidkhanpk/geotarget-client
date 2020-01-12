@@ -11,7 +11,7 @@ const Login = ({ classes }) => {
   const onSuccess = async (user) => {
     try { 
       const idToken = user.getAuthResponse().id_token;
-      const client = new GraphQLClient("http://localhost:4000/graphql", {
+      const client = new GraphQLClient("https://guarded-brook-42627.herokuapp.com/", {
         headers: {authorization: idToken}
       })
       const data = await client.request(ME_QUERY);
