@@ -25,13 +25,14 @@ const wsLink = new WebSocketLink({
 
 
 const client = new ApolloClient({
-  link: wsLink,
   cache: new InMemoryCache()
 })
 
 const Root = () => {
   const initialState = useContext(Context);
   const [state, dispatch] = useReducer(reducer, initialState)
+  console.log(initialState);
+  console.log("App startted")
   return (
       <Router>
         <ApolloProvider client={client}>
